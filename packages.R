@@ -1,0 +1,8 @@
+suppressPackageStartupMessages(library(dplyr))
+suppressPackageStartupMessages(library(data.table))
+suppressPackageStartupMessages(library(ggplot2))
+suppressPackageStartupMessages(library(matrixStats))
+suppressPackageStartupMessages(library(tidyr))
+suppressPackageStartupMessages(library(cowplot))
+suppressPackageStartupMessages(library(pheatmap))
+suppressPackageStartupMessages(library(stringr))
