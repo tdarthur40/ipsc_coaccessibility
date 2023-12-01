@@ -23,12 +23,12 @@ out_dir="outdir_path"
 
 ### Process Covariates
 
-subject_metadata = read_excel("final_supplemental/Table_S1.xlsx")
+subject_metadata = read_excel("Table_S1.xlsx")
 subject_metadata$sex = ifelse(subject_metadata$Sex == "Male",1,0)
 subject_metadata$age = subject_metadata$`Age at enrollment`/mean(subject_metadata$`Age at enrollment`)
 subject_covariates = subject_metadata[, c("Subject ID","WGS UUID","sex","age", paste0("PC",1:20))]
 
-atac_metadata = read_excel("final_supplemental/Table_S6.xlsx")
+atac_metadata = read_excel("Table_S6.xlsx")
 ## Premerge Sample IDs are redundant and used to map the fastq files on GEO
 atac_metadata$`Premerge Sample ID` = NULL
 atac_metadata = unique(atac_metadata)
